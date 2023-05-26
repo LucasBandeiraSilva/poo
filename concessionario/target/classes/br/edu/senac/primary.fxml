@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 
@@ -46,4 +47,28 @@
          </font>
       </TextArea>
    </center>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="316.0" prefWidth="215.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" text="Ordernar por marca">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="37.0" layoutY="20.0" mnemonicParsing="false" onAction="#ordenarPorAno" text="Ordernar por ano">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="45.0" layoutY="65.0" mnemonicParsing="false" text="Ordernar por preço">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </left>
 </BorderPane>
