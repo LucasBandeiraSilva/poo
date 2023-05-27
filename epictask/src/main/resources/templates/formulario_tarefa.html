@@ -12,6 +12,7 @@
    <h1>EpicTask</h1>
    <div class="content">
     <form action="/tarefas" method="POST">
+        <input type="hidden" name="_csrf" th:value="${_csrf.token}" />
         <input type="text" placeholder="titulo" name="titulo">
         <textarea name="descricao" cols="30" rows="10"></textarea>
         <div class="actions">
