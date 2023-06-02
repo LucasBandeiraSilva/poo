@@ -13,7 +13,7 @@
       <form action="/tarefas" method="POST">
         <input type="hidden" name="_csrf" th:value="${_csrf.token}" />        
         <input type="number" placeholder="nota" name="nota" min="0" max="10" />
-        <input type="text" name="nome" id="nome">
+        <input type="text" name="nome" id="nome" placeholder="nome">
         <div class="actions">
           <a class="btn" href="/tarefas">cancelar</a>
           <button class="btn blue">salvar</button>
