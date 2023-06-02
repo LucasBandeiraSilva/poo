@@ -17,11 +17,25 @@ public class TarefaController {
     @Autowired
     TarefaRepository repository;
 
+   
     @PostMapping("/tarefas")
-    public String cadastrar(Tarefa tarefa){
+public String cadastrar(Tarefa tarefa, RedirectAttributes redirect) {
+    int nota = tarefa.getNota();
+
+    if (nota < 0 || nota > 10) {
+        redirect.addFlashAttribute("mensagem", "Nota inválida");
+    } else {
+        if (nota >= 6) {
+            tarefa.setSituacao("Aprovado");
+        } else {
+            tarefa.setSituacao("Reprovado");
+        }
         repository.save(tarefa);
-        return "redirect:/tarefas";
     }
+
+    return "redirect:/tarefas";
+}
+
 
     @GetMapping("/")
     public String home(){

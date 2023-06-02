@@ -29,6 +29,9 @@
         <div class="card-task" th:each="tarefa : ${tarefas}">
             <h2 th:text="${tarefa.titulo}"></h2>
             <p th:text="${tarefa.descricao}"></p>
+            <p>Situação: <span th:text="${tarefa.situacao}"></span></p>
+            <p>Aluno: <span th:text="${tarefa.nome}"></span></p>
+            <p>Nota: <span th:text="${tarefa.nota}"></span></p>
             <form action="/tarefas" method="POST">
                 <input type="hidden" name="_csrf" th:value="${_csrf.token}" />
                 <input type="hidden" name="_method" value="DELETE" />
